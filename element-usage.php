@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name: Elementor Widgets in Use
  * Description: Adds a Widget Usage tab to Elementor Tools in the WordPress admin showing which widget elements are used and where.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Amibe <info@amibe.net>
  * Author URI: https://amibe.net
  * Text Domain: element-usage
@@ -156,7 +156,7 @@ class elementUsage
         // Build query of all 'posts' with template references
         $args = [
             'nopaging'      => true,
-            'post_type'     => 'any',
+            'post_type'     => ['any','elementor_library'],
             'post_status'   => 'any',
             'perm'          => 'readable',
         ];
